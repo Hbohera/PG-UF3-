@@ -55,7 +55,8 @@ void modify(char *name) {
 	else {
 		printf("El fichero esta listo para modificarlo: ");
 		fflush(stdout);
-		fscanf(file, "%s", modifier);
+		fflush(stdin);
+		scanf("%[^\n]s", modifier);
 		fprintf(file, "%s", modifier);
 		fflush(stdout);
 	}
